@@ -1,0 +1,14 @@
+commit_id,repository,commit_message,author,commit_date,files_changed,lines_added,lines_deleted,changed_files,has_pr,quality_category,review_score,label_source
+001,local/test,fix,Asha,2024-01-01T00:00:00Z,1,2,1,src/auth.py,0,Poor,2,manual
+002,local/test,update,Ravi,2024-01-02T00:00:00Z,2,12,4,src/main.py,0,Poor,3,manual
+003,local/test,wip,Noor,2024-01-03T00:00:00Z,5,80,20,src/api.py,0,Poor,2,manual
+004,local/test,changes,Mina,2024-01-04T00:00:00Z,3,22,11,app/view.py,0,Poor,3,manual
+005,local/test,Fix login bug in token refresh flow,Asha,2024-01-05T00:00:00Z,2,18,7,src/auth.py|tests/test_auth.py,0,Average,6,manual
+006,local/test,Update dashboard copy for empty state,Ravi,2024-01-06T00:00:00Z,2,9,6,app/dashboard.html|app/style.css,0,Average,6,manual
+007,local/test,Refactor repository parser validation,Noor,2024-01-07T00:00:00Z,4,44,39,src/github_client.py|tests/test_github.py,0,Average,7,manual
+008,local/test,Add tests for invalid repository URLs,Mina,2024-01-08T00:00:00Z,2,35,5,tests/test_api.py,0,Average,7,manual
+009,local/test,Fix login authentication redirect bug #42,Asha,2024-01-09T00:00:00Z,3,42,15,src/auth.py|src/session.py|tests/test_auth.py,1,Good,8,manual
+010,local/test,Implement paginated GitHub commit collection #51,Ravi,2024-01-10T00:00:00Z,4,96,28,src/github_client.py|src/data_collector.py,1,Good,9,manual
+011,local/test,Document API setup and retraining workflow,Noor,2024-01-11T00:00:00Z,2,64,12,README.md|.env.example,0,Good,8,manual
+012,local/test,Add FastAPI health check and analyze endpoint #63,Mina,2024-01-12T00:00:00Z,3,88,20,app/main.py|tests/test_api.py,1,Good,9,manual
+

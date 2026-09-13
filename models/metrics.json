@@ -1,0 +1,92 @@
+{
+  "best_model": "logistic_regression",
+  "candidate_models": {
+    "logistic_regression": {
+      "selection_accuracy": 1.0,
+      "selection_macro_f1": 1.0,
+      "selection_set": "validation"
+    },
+    "linear_svm": {
+      "selection_accuracy": 0.3333333333333333,
+      "selection_macro_f1": 0.16666666666666666,
+      "selection_set": "validation"
+    },
+    "naive_bayes": {
+      "selection_accuracy": 0.3333333333333333,
+      "selection_macro_f1": 0.16666666666666666,
+      "selection_set": "validation"
+    },
+    "random_forest": {
+      "selection_accuracy": 0.6666666666666666,
+      "selection_macro_f1": 0.5555555555555555,
+      "selection_set": "validation"
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.6666666666666666,
+    "macro_f1": 0.3333333333333333,
+    "classification_report": {
+      "Average": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Good": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "Poor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "accuracy": 0.6666666666666666,
+      "macro avg": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.3333333333333333,
+        "support": 3.0
+      },
+      "weighted avg": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.6666666666666666,
+        "support": 3.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "labels": [
+      "Poor",
+      "Average",
+      "Good"
+    ]
+  },
+  "row_counts": {
+    "total_labeled_rows": 18,
+    "train_rows": 12,
+    "validation_rows": 3,
+    "test_rows": 3
+  },
+  "label_policy": "manual_human_or_weak_rule",
+  "note": "Metrics are computed from the provided labels. If weak_rule labels were allowed, these numbers validate the bootstrap rubric, not human review quality."
+}

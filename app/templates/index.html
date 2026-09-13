@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Git Commit Analyzer</title>
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="dark-theme">
+    <!-- Dynamic Background Elements -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+    <div class="bg-particles" id="bg-particles"></div>
+
+    <header class="app-header">
+      <div class="header-content">
+        <div class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span class="product-name">Git Commit Analyzer</span>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
+          <button id="nav-dashboard" class="nav-btn active">Analyze</button>
+          <button id="nav-history" class="nav-btn">History</button>
+          <button id="nav-profile" class="nav-btn">Profile</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <!-- ANALYZER VIEW (Long Scroll) -->
+      <section id="view-dashboard" class="view-section active">
+        
+        <!-- SECTION 1: HERO -->
+        <section class="story-section hero-section" id="section-hero">
+          <div class="hero-content">
+            <div class="hero-left reveal fade-up">
+              <span class="hero-label">AI-POWERED GIT ANALYTICS</span>
+              <h1 class="hero-title">ANALYZE.<br>UNDERSTAND.<br>IMPROVE.</h1>
+              <p class="hero-subtitle">Analyze real GitHub commits with NLP and Machine Learning, identify commit quality, and improve weak commits with AI.</p>
+              
+              <form id="analyze-form" class="hero-form card-glass">
+                <div class="input-wrapper">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <input
+                    id="repository-url"
+                    name="repository_url"
+                    type="text"
+                    placeholder="https://github.com/owner/repository"
+                    autocomplete="off"
+                  />
+                </div>
+                <button type="submit" class="btn-primary" id="analyze-btn">Analyze All Commits</button>
+                
+                <div id="error-card" class="error-card" hidden>
+                  <div class="error-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  </div>
+                  <div class="error-content">
+                    <h4 id="error-title">Analysis Failed</h4>
+                    <p id="error-message"></p>
+                  </div>
+                </div>
+              </form>
+              
+              <!-- Appears upon successful analysis -->
+              <button id="view-results-btn" class="btn-glow view-results-btn" hidden>View Results ↓</button>
+              
+              <div class="explore-hint">Explore Workflow ↓</div>
+            </div>
+            
+            <div class="hero-right reveal fade-left">
+              <div class="hero-3d-scene" id="hero-3d-scene">
+                <div class="hero-3d-wrapper">
+                  <!-- Decorative floating cards -->
+                  <div class="commit-card-float card-1">"fix login bug"</div>
+                  <div class="commit-card-float card-2">"Update API endpoint"</div>
+                  <div class="commit-card-float card-3">"Improve authentication"</div>
+                  
+                  <!-- 3D Pipeline -->
+                  <div class="pipeline-3d">
+                    <div class="node-3d">GitHub Repo</div>
+                    <div class="line-3d"></div>
+                    <div class="node-3d">Commit Data</div>
+                    <div class="line-3d"></div>
+                    <div class="node-3d">NLP Engine</div>
+                    <div class="line-3d"></div>
+                    <div class="node-3d">Feature Extractor</div>
+                    <div class="line-3d"></div>
+                    <div class="node-3d">ML Model</div>
+                    <div class="line-3d"></div>
+                    <div class="node-3d score-node">10/10 Score</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: HOW IT WORKS -->
+        <section class="story-section workflow-section" id="section-workflow">
+          <h2 class="section-title reveal fade-up">How It Works</h2>
+          <div class="workflow-visual reveal scale-up">
+            <div class="wf-node">GitHub</div><div class="wf-line"></div>
+            <div class="wf-node">Commits</div><div class="wf-line"></div>
+            <div class="wf-node">NLP</div><div class="wf-line"></div>
+            <div class="wf-node">Features</div><div class="wf-line"></div>
+            <div class="wf-node">ML</div><div class="wf-line"></div>
+            <div class="wf-node wf-highlight">Score</div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: ANALYZE ALL COMMITS -->
+        <section class="story-section analyze-commits-section" id="section-analyze">
+          <h2 class="section-title reveal fade-up">Analyze All Commits</h2>
+          <div class="analyze-visual reveal fade-up">
+            <div class="commits-flow">
+              <div class="c-node">Commit</div>
+              <div class="c-node">Commit</div>
+              <div class="c-node">Commit</div>
+              <div class="c-node">Commit</div>
+              <div class="c-node">Commit</div>
+            </div>
+            <div class="flow-down-arrow">↓</div>
+            <div class="analyzer-core">ANALYZER</div>
+            <div class="flow-down-arrow">↓</div>
+            <div class="results-core">RESULTS</div>
+          </div>
+        </section>
+
+        <!-- SECTION 4: NLP + FEATURE ANALYSIS -->
+        <section class="story-section nlp-section" id="section-nlp">
+          <h2 class="section-title reveal fade-up">NLP + Feature Analysis</h2>
+          <div class="nlp-visual card-glass reveal fade-up">
+            <div class="nlp-step">Commit Message</div><div class="nlp-arrow">↓</div>
+            <div class="nlp-step">Text Processing</div><div class="nlp-arrow">↓</div>
+            <div class="nlp-step">NLP Features</div><div class="nlp-arrow">↓</div>
+            <div class="nlp-step">Git Metadata</div><div class="nlp-arrow">↓</div>
+            <div class="nlp-step highlight">ML Input</div>
+          </div>
+        </section>
+
+        <!-- SECTION 5: ML REVIEW SCORE -->
+        <section class="story-section ml-score-section" id="section-score">
+          <h2 class="section-title reveal fade-up">ML Review Score</h2>
+          <div class="dashboard-grid">
+            
+            <!-- Overall Score -->
+            <div class="score-card card-glass reveal fade-up" style="transition-delay: 0.1s">
+              <h3 id="repo-name">Example Repository</h3>
+              <p class="summary-meta" id="repo-meta">Analyze a repository to see real data</p>
+              
+              <div id="overall-quality-label" class="quality-label good example-label">GOOD</div>
+              <div class="score-circle-wrapper">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle" id="score-circle-path" stroke-dasharray="84, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <text x="18" y="20.35" class="percentage" id="overall-score-value">8.4</text>
+                  <text x="18" y="26" class="percentage-label">/ 10</text>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Quality Summary -->
+            <div class="quality-summary card-glass reveal fade-up" style="transition-delay: 0.2s">
+              <h3>Quality Distribution</h3>
+              <div class="bar-chart">
+                <div class="bar-row"><span class="label">Good</span><div class="bar-track"><div class="bar good-bg" id="bar-good" style="width: 75%;"></div></div><span class="count" id="count-good">12</span></div>
+                <div class="bar-row"><span class="label">Average</span><div class="bar-track"><div class="bar avg-bg" id="bar-average" style="width: 20%;"></div></div><span class="count" id="count-average">3</span></div>
+                <div class="bar-row"><span class="label">Poor</span><div class="bar-track"><div class="bar poor-bg" id="bar-poor" style="width: 5%;"></div></div><span class="count" id="count-poor">1</span></div>
+              </div>
+            </div>
+
+            <!-- Insights -->
+            <div class="insights card-glass reveal fade-up" style="transition-delay: 0.3s">
+              <h3>Insights</h3>
+              <ul id="insights-list" class="insights-list">
+                <li class="example-item">Most commits follow conventional patterns.</li>
+                <li class="example-item">Consider adding more description to PR merges.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 6: AI FIX & SECTION 7: BEFORE/AFTER -->
+        <section class="story-section ai-fix-section" id="section-ai">
+          <h2 class="section-title reveal fade-up">AI Fix & Comparison</h2>
+          
+          <div class="ai-stats card-glass reveal fade-up" style="margin-bottom: 2rem;">
+            <h3>AI Improvements</h3>
+            <div class="ai-stats-grid">
+              <div class="stat-box">
+                <span class="stat-value" id="ai-stat-count">0</span>
+                <span class="stat-label">Commits Improved</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-value" id="ai-stat-score">+0.0</span>
+                <span class="stat-label">Avg Score Increase</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-value" id="ai-stat-upgrades">0</span>
+                <span class="stat-label">Quality Upgrades</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decorative Before/After Flow that is always visible on landing -->
+          <div class="ba-visual card-glass reveal fade-up">
+            <div class="ba-pane before-pane">
+              <div class="ba-header">BEFORE</div>
+              <div class="ba-body">
+                <p class="ba-msg example-msg">"fix login"</p>
+                <div class="ba-score">
+                  <span class="badge badge-poor">POOR</span>
+                  <strong>4.5</strong><span class="score-max">/10</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="ba-pipeline">
+              <div class="ba-arrow">↓</div>
+              <div class="ba-ai-node">AI ANALYSIS</div>
+              <div class="ba-arrow">↓</div>
+            </div>
+
+            <div class="ba-pane after-pane">
+              <div class="ba-header">AFTER</div>
+              <div class="ba-body">
+                <p class="ba-msg example-msg">"Fix login authentication failure in session manager"</p>
+                <div class="ba-score">
+                  <span class="badge badge-good">GOOD</span>
+                  <strong>8.5</strong><span class="score-max">/10</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 8: COMPLETE REPORT -->
+        <section class="story-section complete-report-section" id="section-report">
+          <h2 class="section-title reveal fade-up">Complete Report</h2>
+          <div class="table-card card-glass reveal fade-up">
+            <div class="table-header">
+              <div class="table-controls">
+                <input type="text" id="search-input" class="search-input" placeholder="Search message or author..." />
+                <select id="filter-select" class="filter-select">
+                  <option value="all">All Qualities</option>
+                  <option value="good">Good</option>
+                  <option value="average">Average</option>
+                  <option value="poor">Poor</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="commit-table">
+                <thead>
+                  <tr>
+                    <th>Commit</th>
+                    <th class="hide-mobile">Author</th>
+                    <th class="hide-mobile sortable" data-sort="files">Files ↕</th>
+                    <th class="sortable" data-sort="quality">Quality ↕</th>
+                    <th class="sortable" data-sort="score">Score ↕</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="commit-tbody">
+                  <!-- Example Row shown before real analysis -->
+                  <tr class="example-row">
+                    <td class="td-truncate">"fix login"</td>
+                    <td class="hide-mobile">Jane Doe</td>
+                    <td class="hide-mobile">2</td>
+                    <td><span class="badge badge-poor">POOR</span></td>
+                    <td><strong>4.5</strong></td>
+                    <td><button class="btn-secondary" disabled>Fix with AI</button></td>
+                  </tr>
+                  <tr class="example-row">
+                    <td class="td-truncate">"Update API endpoint"</td>
+                    <td class="hide-mobile">John Smith</td>
+                    <td class="hide-mobile">5</td>
+                    <td><span class="badge badge-good">GOOD</span></td>
+                    <td><strong>9.2</strong></td>
+                    <td><button class="btn-secondary" disabled>View</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 9: FINAL CTA -->
+        <section class="story-section final-cta-section" id="section-cta">
+          <div class="final-cta-content reveal scale-up">
+            <h2>READY TO ANALYZE YOUR COMMITS?</h2>
+            <button class="btn-primary btn-glow" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.getElementById('repository-url').focus();">Analyze All Commits</button>
+          </div>
+        </section>
+
+      </section>
+
+      <!-- HISTORY VIEW -->
+      <section id="view-history" class="view-section" hidden>
+        <div class="history-card card-glass">
+          <h2>Analysis History</h2>
+          <p class="subtitle">Previous repositories analyzed on this device.</p>
+          <div class="table-responsive">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Repository</th>
+                  <th>Date</th>
+                  <th>Commits</th>
+                  <th>Overall Quality</th>
+                  <th>Score</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="history-tbody">
+                <tr><td colspan="6" class="empty-state">No history found.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal: AI Commit Fix -->
+    <dialog id="ai-fix-modal" class="commit-modal ai-fix-modal">
+      <div class="modal-content card-glass">
+        <header class="modal-header">
+          <h3 class="modal-sha">✨ AI Commit Fix</h3>
+          <button id="ai-modal-close" class="icon-btn" aria-label="Close modal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          </button>
+        </header>
+        <div class="modal-body">
+          <div class="before-after-container">
+            <div class="ba-card before-card">
+              <div class="ba-header">BEFORE</div>
+              <div class="ba-body">
+                <p id="ba-before-msg" class="ba-msg"></p>
+                <div class="ba-score">
+                  <span id="ba-before-badge" class="badge"></span>
+                  <strong id="ba-before-score"></strong><span class="score-max">/10</span>
+                </div>
+              </div>
+            </div>
+            <div class="ba-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </div>
+            <div class="ba-card after-card" id="ba-after-container">
+              <div class="ba-header">AFTER</div>
+              <div class="ba-body" id="ba-after-content">
+                <div id="ai-loading" class="ai-loading">
+                  <div class="spinner"></div>
+                  <span>AI is analyzing...</span>
+                </div>
+                <div id="ai-result" class="ai-result" hidden>
+                  <p id="ba-after-msg" class="ba-msg"></p>
+                  <div class="ba-score">
+                    <span id="ba-after-badge" class="badge"></span>
+                    <strong id="ba-after-score"></strong><span class="score-max">/10</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="ai-action-footer" class="ai-action-footer" hidden>
+            <button id="ai-apply-btn" class="btn-primary btn-glow">Accept & Update Report</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Modal: Standard View -->
+    <dialog id="commit-modal" class="commit-modal">
+      <div class="modal-content card-glass">
+        <header class="modal-header">
+          <h3 id="modal-sha" class="modal-sha"></h3>
+          <button id="modal-close" class="icon-btn" aria-label="Close modal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          </button>
+        </header>
+        <div class="modal-body">
+          <p id="modal-message" class="modal-message"></p>
+          <div class="modal-meta" id="modal-meta"></div>
+          <div class="modal-score-banner">
+            <div class="banner-section"><span class="label">Review Quality</span><span class="badge" id="modal-quality"></span></div>
+            <div class="banner-section"><span class="label">Score</span><strong id="modal-score-val" class="score-val"></strong><span class="score-max">/10</span></div>
+          </div>
+          <div class="modal-grid">
+            <div class="modal-panel"><h4>Reasons</h4><ul id="modal-reasons" class="bullet-list"></ul></div>
+            <div class="modal-panel"><h4>Suggestions</h4><ul id="modal-suggestions" class="bullet-list"></ul></div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Modal: Profile -->
+    <dialog id="profile-modal" class="commit-modal">
+      <div class="modal-content card-glass">
+        <header class="modal-header">
+          <h3 class="modal-sha">Local Profile</h3>
+          <button id="profile-close" class="icon-btn" aria-label="Close modal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          </button>
+        </header>
+        <div class="modal-body">
+          <div class="profile-stats">
+            <div class="stat-box">
+              <span class="stat-value" id="profile-repos">0</span>
+              <span class="stat-label">Repositories Analyzed</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-value" id="profile-commits">0</span>
+              <span class="stat-label">Commits Analyzed</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-value" id="profile-score">0.0</span>
+              <span class="stat-label">Global Avg Score</span>
+            </div>
+          </div>
+          <div class="profile-recent">
+            <h4>Recent Activity</h4>
+            <ul id="profile-recent-list" class="recent-list"></ul>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

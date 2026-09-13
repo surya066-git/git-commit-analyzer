@@ -1,0 +1,367 @@
+[
+  {
+    "commit_id": "dae7ef63b4df6eded86637f251fc4e3a06c3b479",
+    "repository": "psf/requests",
+    "commit_message": "Bump https://github.com/astral-sh/ruff-pre-commit (#7616)\n\nBumps the pre-commit group with 1 update: [https://github.com/astral-sh/ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit).\n\n\nUpdates `https://github.com/astral-sh/ruff-pre-commit` from v0.16.3 to 0.16.4\n- [Release notes](https://github.com/astral-sh/ruff-pre-commit/releases)\n- [Commits](https://github.com/astral-sh/ruff-pre-commit/compare/v0.16.3...v0.16.4)\n\n---\nupdated-dependencies:\n- dependency-name: https://github.com/astral-sh/ruff-pre-commit\n  dependency-version: 0.16.4\n  dependency-type: direct:production\n  dependency-group: pre-commit\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "author": "dependabot[bot]",
+    "commit_date": "2026-09-02T18:15:52Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      ".pre-commit-config.yaml"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/dae7ef63b4df6eded86637f251fc4e3a06c3b479"
+  },
+  {
+    "commit_id": "5460f467b02e49471c0fd6cfc9ca0adab6351f98",
+    "repository": "psf/requests",
+    "commit_message": "Update lock-issues.yml to latest dependencies (#7609)",
+    "author": "Nate Prewitt",
+    "commit_date": "2026-08-25T00:45:57Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      ".github/workflows/lock-issues.yml"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/5460f467b02e49471c0fd6cfc9ca0adab6351f98"
+  },
+  {
+    "commit_id": "6af0b94158bbe10c45e754e85f9701f401e6aa9c",
+    "repository": "psf/requests",
+    "commit_message": "Bump https://github.com/astral-sh/ruff-pre-commit (#7608)\n\nBumps the pre-commit group with 1 update: [https://github.com/astral-sh/ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit).\n\n\nUpdates `https://github.com/astral-sh/ruff-pre-commit` from v0.16.2 to 0.16.3\n- [Release notes](https://github.com/astral-sh/ruff-pre-commit/releases)\n- [Commits](https://github.com/astral-sh/ruff-pre-commit/compare/v0.16.2...v0.16.3)\n\n---\nupdated-dependencies:\n- dependency-name: https://github.com/astral-sh/ruff-pre-commit\n  dependency-version: 0.16.3\n  dependency-type: direct:production\n  dependency-group: pre-commit\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "author": "dependabot[bot]",
+    "commit_date": "2026-08-24T17:33:15Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      ".pre-commit-config.yaml"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/6af0b94158bbe10c45e754e85f9701f401e6aa9c"
+  },
+  {
+    "commit_id": "8f8b212de8c2129d7954c6cd373762880375620a",
+    "repository": "psf/requests",
+    "commit_message": "Bump https://github.com/astral-sh/ruff-pre-commit (#7606)\n\nBumps the pre-commit group with 1 update: [https://github.com/astral-sh/ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit).\n\n\nUpdates `https://github.com/astral-sh/ruff-pre-commit` from v0.16.1 to 0.16.2\n- [Release notes](https://github.com/astral-sh/ruff-pre-commit/releases)\n- [Commits](https://github.com/astral-sh/ruff-pre-commit/compare/v0.16.1...v0.16.2)\n\n---\nupdated-dependencies:\n- dependency-name: https://github.com/astral-sh/ruff-pre-commit\n  dependency-version: 0.16.2\n  dependency-type: direct:production\n  dependency-group: pre-commit\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "author": "dependabot[bot]",
+    "commit_date": "2026-08-17T19:03:13Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      ".pre-commit-config.yaml"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/8f8b212de8c2129d7954c6cd373762880375620a"
+  },
+  {
+    "commit_id": "8068356288978c4f54661ae6f95afe0e0831885e",
+    "repository": "psf/requests",
+    "commit_message": "Bump https://github.com/astral-sh/ruff-pre-commit (#7603)\n\nBumps the pre-commit group with 1 update: [https://github.com/astral-sh/ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit).\n\n\nUpdates `https://github.com/astral-sh/ruff-pre-commit` from v0.16.0 to 0.16.1\n- [Release notes](https://github.com/astral-sh/ruff-pre-commit/releases)\n- [Commits](https://github.com/astral-sh/ruff-pre-commit/compare/v0.16.0...v0.16.1)\n\n---\nupdated-dependencies:\n- dependency-name: https://github.com/astral-sh/ruff-pre-commit\n  dependency-version: 0.16.1\n  dependency-type: direct:production\n  dependency-group: pre-commit\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "author": "dependabot[bot]",
+    "commit_date": "2026-08-11T16:14:26Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      ".pre-commit-config.yaml"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/8068356288978c4f54661ae6f95afe0e0831885e"
+  },
+  {
+    "commit_id": "1f6589ec3a1ee910f9a65cc3ceac60b26677bc0e",
+    "repository": "psf/requests",
+    "commit_message": "Bump https://github.com/astral-sh/ruff-pre-commit (#7598)\n\nBumps the pre-commit group with 1 update: [https://github.com/astral-sh/ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit).\n\n\nUpdates `https://github.com/astral-sh/ruff-pre-commit` from v0.15.22 to 0.16.0\n- [Release notes](https://github.com/astral-sh/ruff-pre-commit/releases)\n- [Commits](https://github.com/astral-sh/ruff-pre-commit/compare/v0.15.22...v0.16.0)\n\n---\nupdated-dependencies:\n- dependency-name: https://github.com/astral-sh/ruff-pre-commit\n  dependency-version: 0.16.0\n  dependency-type: direct:production\n  dependency-group: pre-commit\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "author": "dependabot[bot]",
+    "commit_date": "2026-08-03T17:52:44Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      ".pre-commit-config.yaml"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/1f6589ec3a1ee910f9a65cc3ceac60b26677bc0e"
+  },
+  {
+    "commit_id": "414f0513c33883adf6f2b46901d4f0b38a455851",
+    "repository": "psf/requests",
+    "commit_message": "Bump the actions group with 2 updates (#7596)\n\nBumps the actions group with 2 updates: [actions/setup-python](https://github.com/actions/setup-python) and [zizmorcore/zizmor-action](https://github.com/zizmorcore/zizmor-action).\n\n\nUpdates `actions/setup-python` from 6.3.0 to 7.0.0\n- [Release notes](https://github.com/actions/setup-python/releases)\n- [Commits](https://github.com/actions/setup-python/compare/ece7cb06caefa5fff74198d8649806c4678c61a1...5fda3b95a4ea91299a34e894583c3862153e4b97)\n\nUpdates `zizmorcore/zizmor-action` from 0.5.2 to 0.6.0\n- [Release notes](https://github.com/zizmorcore/zizmor-action/releases)\n- [Commits](https://github.com/zizmorcore/zizmor-action/compare/71321a20a9ded102f6e9ce5718a2fcec2c4f70d8...6599ee8b7a49aef6a770f63d261d214911a7ce02)\n\n---\nupdated-dependencies:\n- dependency-name: actions/setup-python\n  dependency-version: 7.0.0\n  dependency-type: direct:production\n  update-type: version-update:semver-major\n  dependency-group: actions\n- dependency-name: zizmorcore/zizmor-action\n  dependency-version: 0.6.0\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n  dependency-group: actions\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "author": "dependabot[bot]",
+    "commit_date": "2026-07-27T17:25:09Z",
+    "files_changed": 5,
+    "lines_added": 7,
+    "lines_deleted": 7,
+    "changed_files": [
+      ".github/workflows/lint.yml",
+      ".github/workflows/publish.yml",
+      ".github/workflows/run-tests.yml",
+      ".github/workflows/typecheck.yml",
+      ".github/workflows/zizmor.yml"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/414f0513c33883adf6f2b46901d4f0b38a455851"
+  },
+  {
+    "commit_id": "ded32878c0090f6b7b32a008176df6cecf36481f",
+    "repository": "psf/requests",
+    "commit_message": "Bump https://github.com/astral-sh/ruff-pre-commit (#7597)\n\nBumps the pre-commit group with 1 update: [https://github.com/astral-sh/ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit).\n\n\nUpdates `https://github.com/astral-sh/ruff-pre-commit` from v0.15.21 to 0.15.22\n- [Release notes](https://github.com/astral-sh/ruff-pre-commit/releases)\n- [Commits](https://github.com/astral-sh/ruff-pre-commit/compare/v0.15.21...v0.15.22)\n\n---\nupdated-dependencies:\n- dependency-name: https://github.com/astral-sh/ruff-pre-commit\n  dependency-version: 0.15.22\n  dependency-type: direct:production\n  dependency-group: pre-commit\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "author": "dependabot[bot]",
+    "commit_date": "2026-07-27T17:18:18Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      ".pre-commit-config.yaml"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/ded32878c0090f6b7b32a008176df6cecf36481f"
+  },
+  {
+    "commit_id": "69f84847045bef7a849cc994a26fe7ba8a169e95",
+    "repository": "psf/requests",
+    "commit_message": "Bump the actions group with 3 updates (#7591)\n\nBumps the actions group with 3 updates: [github/codeql-action/init](https://github.com/github/codeql-action), [github/codeql-action/autobuild](https://github.com/github/codeql-action) and [github/codeql-action/analyze](https://github.com/github/codeql-action).\n\n\nUpdates `github/codeql-action/init` from 4.36.0 to 4.37.0\n- [Release notes](https://github.com/github/codeql-action/releases)\n- [Changelog](https://github.com/github/codeql-action/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/github/codeql-action/compare/7211b7c8077ea37d8641b6271f6a365a22a5fbfa...99df26d4f13ea111d4ec1a7dddef6063f76b97e9)\n\nUpdates `github/codeql-action/autobuild` from 4.36.0 to 4.37.0\n- [Release notes](https://github.com/github/codeql-action/releases)\n- [Changelog](https://github.com/github/codeql-action/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/github/codeql-action/compare/7211b7c8077ea37d8641b6271f6a365a22a5fbfa...99df26d4f13ea111d4ec1a7dddef6063f76b97e9)\n\nUpdates `github/codeql-action/analyze` from 4.36.0 to 4.37.0\n- [Release notes](https://github.com/github/codeql-action/releases)\n- [Changelog](https://github.com/github/codeql-action/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/github/codeql-action/compare/7211b7c8077ea37d8641b6271f6a365a22a5fbfa...99df26d4f13ea111d4ec1a7dddef6063f76b97e9)\n\n---\nupdated-dependencies:\n- dependency-name: github/codeql-action/init\n  dependency-version: 4.37.0\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n  dependency-group: actions\n- dependency-name: github/codeql-action/autobuild\n  dependency-version: 4.37.0\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n  dependency-group: actions\n- dependency-name: github/codeql-action/analyze\n  dependency-version: 4.37.0\n  dependency-type: direct:production\n  update-type: version-update:semver-minor\n  dependency-group: actions\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "author": "dependabot[bot]",
+    "commit_date": "2026-07-20T18:41:16Z",
+    "files_changed": 1,
+    "lines_added": 3,
+    "lines_deleted": 3,
+    "changed_files": [
+      ".github/workflows/codeql-analysis.yml"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/69f84847045bef7a849cc994a26fe7ba8a169e95"
+  },
+  {
+    "commit_id": "b17c61b618b1824f1f5d9edcacaf16801343a295",
+    "repository": "psf/requests",
+    "commit_message": "Bump https://github.com/astral-sh/ruff-pre-commit (#7590)\n\nBumps the pre-commit group with 1 update: [https://github.com/astral-sh/ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit).\n\n\nUpdates `https://github.com/astral-sh/ruff-pre-commit` from v0.15.20 to 0.15.21\n- [Release notes](https://github.com/astral-sh/ruff-pre-commit/releases)\n- [Commits](https://github.com/astral-sh/ruff-pre-commit/compare/v0.15.20...v0.15.21)\n\n---\nupdated-dependencies:\n- dependency-name: https://github.com/astral-sh/ruff-pre-commit\n  dependency-version: 0.15.21\n  dependency-type: direct:production\n  dependency-group: pre-commit\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "author": "dependabot[bot]",
+    "commit_date": "2026-07-20T17:55:26Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      ".pre-commit-config.yaml"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/b17c61b618b1824f1f5d9edcacaf16801343a295"
+  },
+  {
+    "commit_id": "f361ead047be5cb873174218582f7d8b9fcd9f49",
+    "repository": "psf/requests",
+    "commit_message": "Bump https://github.com/astral-sh/ruff-pre-commit (#7562)\n\nBumps the pre-commit group with 1 update: [https://github.com/astral-sh/ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit).\n\n\nUpdates `https://github.com/astral-sh/ruff-pre-commit` from v0.15.18 to 0.15.20\n- [Release notes](https://github.com/astral-sh/ruff-pre-commit/releases)\n- [Commits](https://github.com/astral-sh/ruff-pre-commit/compare/v0.15.18...v0.15.20)\n\n---\nupdated-dependencies:\n- dependency-name: https://github.com/astral-sh/ruff-pre-commit\n  dependency-version: 0.15.20\n  dependency-type: direct:production\n  dependency-group: pre-commit\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "author": "dependabot[bot]",
+    "commit_date": "2026-07-09T15:12:40Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      ".pre-commit-config.yaml"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/f361ead047be5cb873174218582f7d8b9fcd9f49"
+  },
+  {
+    "commit_id": "d38495c90653496c3c81f31e8f9bef162b400b44",
+    "repository": "psf/requests",
+    "commit_message": "Fix link to AI Policy in CONTRIBUTING.md (#7576)",
+    "author": "Yamac",
+    "commit_date": "2026-07-09T15:10:39Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      ".github/CONTRIBUTING.md"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/psf/requests/commit/d38495c90653496c3c81f31e8f9bef162b400b44"
+  },
+  {
+    "commit_id": "7fd1a60b01f91b314f59955a4e4d4e80d8edf11d",
+    "repository": "octocat/Hello-World",
+    "commit_message": "Merge pull request #6 from Spaceghost/patch-1\n\nNew line at end of file.",
+    "author": "The Octocat",
+    "commit_date": "2012-03-06T23:06:50Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      "README"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/octocat/Hello-World/commit/7fd1a60b01f91b314f59955a4e4d4e80d8edf11d"
+  },
+  {
+    "commit_id": "762941318ee16e59dabbacb1b4049eec22f0d303",
+    "repository": "octocat/Hello-World",
+    "commit_message": "New line at end of file. --Signed off by Spaceghost",
+    "author": "Johnneylee Jack Rollins",
+    "commit_date": "2011-09-14T04:42:41Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      "README"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/octocat/Hello-World/commit/762941318ee16e59dabbacb1b4049eec22f0d303"
+  },
+  {
+    "commit_id": "553c2077f0edc3d5dc5d17262f6aa498e69d6f8e",
+    "repository": "octocat/Hello-World",
+    "commit_message": "first commit",
+    "author": "cameronmcefee",
+    "commit_date": "2011-01-26T19:06:08Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 0,
+    "changed_files": [
+      "README"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/octocat/Hello-World/commit/553c2077f0edc3d5dc5d17262f6aa498e69d6f8e"
+  },
+  {
+    "commit_id": "d0dd1f61b33d64e29d8bc1372a94ef6a2fee76a9",
+    "repository": "octocat/Spoon-Knife",
+    "commit_message": "Pointing to the guide for forking",
+    "author": "The Octocat",
+    "commit_date": "2014-02-12T23:20:44Z",
+    "files_changed": 1,
+    "lines_added": 1,
+    "lines_deleted": 1,
+    "changed_files": [
+      "README.md"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/octocat/Spoon-Knife/commit/d0dd1f61b33d64e29d8bc1372a94ef6a2fee76a9"
+  },
+  {
+    "commit_id": "bb4cc8d3b2e14b3af5df699876dd4ff3acd00b7f",
+    "repository": "octocat/Spoon-Knife",
+    "commit_message": "Create styles.css and updated README",
+    "author": "The Octocat",
+    "commit_date": "2014-02-04T22:38:36Z",
+    "files_changed": 2,
+    "lines_added": 26,
+    "lines_deleted": 0,
+    "changed_files": [
+      "README.md",
+      "styles.css"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/octocat/Spoon-Knife/commit/bb4cc8d3b2e14b3af5df699876dd4ff3acd00b7f"
+  },
+  {
+    "commit_id": "a30c19e3f13765a3b48829788bc1cb8b4e95cee4",
+    "repository": "octocat/Spoon-Knife",
+    "commit_message": "Created index page for future collaborative edits",
+    "author": "The Octocat",
+    "commit_date": "2014-02-04T22:38:24Z",
+    "files_changed": 1,
+    "lines_added": 20,
+    "lines_deleted": 0,
+    "changed_files": [
+      "index.html"
+    ],
+    "file_types": "",
+    "has_issue": 0,
+    "has_pr": 0,
+    "pull_request_numbers": [],
+    "review_count": 0,
+    "review_states": [],
+    "html_url": "https://github.com/octocat/Spoon-Knife/commit/a30c19e3f13765a3b48829788bc1cb8b4e95cee4"
+  }
+]
