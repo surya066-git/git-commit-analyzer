@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 import os
 import re
 import time
@@ -11,7 +12,7 @@ from urllib.parse import urlparse
 
 import requests
 
-
+logger = logging.getLogger(__name__)
 GITHUB_API_URL = "https://api.github.com"
 REPOSITORY_NAME_PATTERN = re.compile(r"^[A-Za-z0-9_.-]+$")
 
@@ -98,9 +99,35 @@ class GitHubClient:
             raise GitHubAPIError(f"Network error while contacting GitHub: {exc}") from exc
 
         if response.status_code >= 400:
+            had_token = "Authorization" in self.session.headers
+            if response.status_code == 401 and had_token:
+                logger.warning("GitHub token returned 401 Bad credentials. Falling back to unauthenticated request...")
+                self.session.headers.pop("Authorization", None)
+                self.token = None
+                try:
+                    retry_response = self.session.get(self._url(path), params=params, timeout=self.timeout)
+                    if retry_response.status_code < 400:
+                        if not retry_response.content:
+                            return None
+                        return retry_response.json()
+                    if retry_response.status_code == 404:
+                        raise GitHubAPIError(
+                            "Repository not found or access denied. Your GITHUB_TOKEN in .env is invalid or expired ('Bad credentials'). "
+                            "Please update it with a valid token if this repository is private.",
+                            status_code=401,
+                        )
+                    response = retry_response
+                except requests.RequestException:
+                    pass
+
             reset_at = _header_int(response.headers.get("X-RateLimit-Reset"))
             message = _error_message(response)
-            if response.status_code == 403 and response.headers.get("X-RateLimit-Remaining") == "0":
+            if response.status_code == 401:
+                message = (
+                    "GitHub authentication failed (Bad credentials). Your GITHUB_TOKEN in .env is invalid or expired. "
+                    "Please update it with a valid Personal Access Token or clear it to analyze public repositories."
+                )
+            elif response.status_code == 403 and response.headers.get("X-RateLimit-Remaining") == "0":
                 reset_text = f" Reset time: {time.ctime(reset_at)}." if reset_at else ""
                 message = f"GitHub API rate limit exceeded.{reset_text}"
             raise GitHubAPIError(message, status_code=response.status_code, reset_at=reset_at)
